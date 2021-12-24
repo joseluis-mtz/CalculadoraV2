@@ -39,8 +39,8 @@
     End Sub
 
     Private Sub btnEjecuta_Click(sender As Object, e As EventArgs) Handles btnEjecuta.Click
-        Dim numero1 = txtNum1.Text
-        Dim numero2 = txtNum2.Text
+        Dim numero1 = Val(txtNum1.Text)
+        Dim numero2 = Val(txtNum2.Text)
         If numero1 >= numero2 Then
             txtResultado.Text = Val(txtNum1.Text) - Val(txtNum2.Text)
         Else
