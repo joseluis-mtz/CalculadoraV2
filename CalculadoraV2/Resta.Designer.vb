@@ -22,6 +22,7 @@ Partial Class Resta
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.btnEjecuta = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -29,6 +30,8 @@ Partial Class Resta
         Me.txtResultado = New System.Windows.Forms.TextBox()
         Me.txtNum2 = New System.Windows.Forms.TextBox()
         Me.txtNum1 = New System.Windows.Forms.TextBox()
+        Me.eRP = New System.Windows.Forms.ErrorProvider(Me.components)
+        CType(Me.eRP, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnSalir
@@ -95,6 +98,10 @@ Partial Class Resta
         Me.txtNum1.Size = New System.Drawing.Size(100, 26)
         Me.txtNum1.TabIndex = 20
         '
+        'eRP
+        '
+        Me.eRP.ContainerControl = Me
+        '
         'Resta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -109,6 +116,7 @@ Partial Class Resta
         Me.Controls.Add(Me.txtNum1)
         Me.Name = "Resta"
         Me.Text = "Resta"
+        CType(Me.eRP, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -121,4 +129,5 @@ Partial Class Resta
     Friend WithEvents txtResultado As TextBox
     Friend WithEvents txtNum2 As TextBox
     Friend WithEvents txtNum1 As TextBox
+    Friend WithEvents eRP As ErrorProvider
 End Class
