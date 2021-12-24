@@ -42,4 +42,36 @@
         btnDiv.Width = 114
         btnDiv.Height = 99
     End Sub
+
+    ''Botón para Ir a suma
+    Private Sub btnSuma_Click(sender As Object, e As EventArgs) Handles btnSuma.Click
+        '' Ir a suma, se crea una instancia del formulario que se desea mostrar
+        Dim frmCambia = New Suma()
+        '' Se muestra el nuevo formulario como dependiente del formulario principal para funcionar
+        frmCambia.ShowDialog()
+    End Sub
+
+    ''Botón para Ir a resta
+    Private Sub btnResta_Click(sender As Object, e As EventArgs) Handles btnResta.Click
+        '' Ir a resta, se crea una instancia del formulario que se desea mostrar
+        Dim frmCambia = New Resta()
+        '' Se muestra el nuevo formulario como dependiente del formulario principal para funcionar
+        frmCambia.ShowDialog()
+    End Sub
+
+    ''Botón para Ir a multiplicación
+    Private Sub btnMult_Click(sender As Object, e As EventArgs) Handles btnMult.Click
+        '' Ir a multiplicación, se crea una instancia del formulario que se desea mostrar
+        Dim frmCambia = New Multiplicacion()
+        '' Se muestra el nuevo formulario como dependiente del formulario principal para funcionar
+        frmCambia.ShowDialog()
+    End Sub
+
+    ''Botón para Ir a división
+    Private Sub btnDiv_Click(sender As Object, e As EventArgs) Handles btnDiv.Click
+        '' Ir a división, se crea una instancia del formulario que se desea mostrar
+        Dim frmCambia = New Division()
+        '' Se muestra el nuevo formulario como dependiente del formulario principal para funcionar
+        frmCambia.ShowDialog()
+    End Sub
 End Class
